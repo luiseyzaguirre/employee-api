@@ -2,7 +2,6 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const employeeSchema = new Schema({
-    
     rut:{
         type:String
     },
@@ -15,7 +14,10 @@ const employeeSchema = new Schema({
     email:{
         type:String
     }
-},{timestamps:true});
+}, {
+    timestamps: true,
+});
 
 const Employee = mongoose.model('Employee', employeeSchema);
+
 module.exports = Employee;
