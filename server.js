@@ -11,9 +11,9 @@ app.use(cors());
 app.use(express.json());
 
 const uri = 'mongodb://localhost:27017/employeeDB';
-mongoose.connect(uri, { useNewUrlParser: true, useCreateIndex: true }
-);
+mongoose.connect(uri, { useNewUrlParser: true, useCreateIndex: true });
 const connection = mongoose.connection;
+
 connection.once('open', () => {
     console.log("MongoDB database connection established successfully");
 })
